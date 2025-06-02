@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artykuły z Supabase</title>
+  </head>
+  <body>
+    <h1 id="lista">Lista artykułów</h1>
+    
+    <select id="sortSelect">
+  <option value="created_at.desc">Po dacie malejąco</option>
+  <option value="created_at.asc">Po dacie rosnąco</option>
+  <option value="title.asc">Po nazwie alfabetycznie</option>
+  </select>
+
+    <div id="article"></div>
+    <label for="created_at">Data utworzenia:</label>
+<input type="date" name="created_at" id="created_at" required />
+
+  <form id="articleForm">
+    <label>Tytuł: <input type="text" name="title" required></label>
+    <label>Podtytuł: <input type="text" name="subtitle" required></label>
+    <label>Autor: <input type="text" name="author" required></label>
+    <label>Treść: <textarea name="content" rows="6" required></textarea></label>
+    <button type="submit">Dodaj artykuł</button>
+  </form>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
